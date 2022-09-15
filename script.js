@@ -1,3 +1,66 @@
+// async function loadIntoTable(url, table) {
+//   const tableBody = table.querySelector("tbody");
+//   const response = await fetch(url);
+//   //   const { id, name, email } = await response.json();
+//   const dataa = await response.json();
+
+//   console.log(dataa);
+
+//   const rowElement = document.createElement("tr");
+
+//   let tableData = "";
+//   dataa.map((d) => {
+//     tableData += `
+//     <tr>
+//     <td>${d.id}</td>
+//     <td>${d.name}</td>
+//     <td>${d.email}</td>
+//     <td>${d?.address?.city || "Germany"}</td>
+
+//     <td>
+//     <button onclick="editUser()">Edit</button>
+//     <button>Delete</button>
+//     </td>
+
+//     </tr>
+//     `;
+//     // console.log(tableData);
+//   });
+//   tableBody.innerHTML = tableData;
+
+// tableBody.appendChild(tableData);
+
+// const { id, name, email } = dataa[5];
+// console.log(name);
+
+// let cellElement;
+
+// for (const data of dataa) {
+//   // console.log(data);
+//   const { id, name, email } = data;
+//   // console.log(name, email, id);
+
+//   cellElement = document.createElement("tr");
+//   cellElement.textContent = data.name;
+
+//   // const dataElement = document.querySelector("td");
+
+//   // for (const key in data) {
+//   //   // if (Object.hasOwnProperty.call(data, key)) {
+//   //   //   const element = data[key];
+//   //   //   console.log(element);
+//   //   // }
+//   //   // console.log(key);
+//   //   console.log(key, ":", data[key]);
+//   // }
+//   // cellElement.textContent = data.id;
+//   rowElement.appendChild(cellElement);
+// }
+
+// tableBody.appendChild(rowElement);
+// tableBody.appendChild(cellElement);
+// }
+
 const userId = document.querySelector(".editId");
 const userName = document.querySelector(".editName");
 const userEmail = document.querySelector(".editEmail");
