@@ -1,13 +1,9 @@
 // New User
 const form = document.getElementById("form");
 const editForm = document.getElementById("edit-form");
-console.log(form);
 const username = document.getElementById("username");
 const email = document.getElementById("useremail");
 const address = document.getElementById("useraddress");
-// console.log(username);
-// console.log(email);
-// console.log(address);
 
 editForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -85,10 +81,6 @@ const editedName = document.getElementById("name");
 const editedEmail = document.getElementById("email");
 const editedAddress = document.getElementById("address");
 
-console.log(editedName);
-console.log(editedEmail);
-console.log(editedAddress);
-
 const editedUsernameValidation = () => {
   if (editedName.value.trim() === "") {
     setErrorFor(editedName, "*Username cannot be blank");
@@ -139,9 +131,9 @@ editedEmail.addEventListener("blur", editedEmailValidation);
 editedAddress.addEventListener("keyup", editedAddressValidation);
 editedAddress.addEventListener("blur", editedAddressValidation);
 
-const checkInputs = () => {
-  return [usernameValidation(), emailValidation(), addressValidation()];
-};
+// const checkInputs = () => {
+//   return [usernameValidation(), emailValidation(), addressValidation()];
+// };
 
 const setErrorFor = (input, message) => {
   const formControl = input.parentElement;
