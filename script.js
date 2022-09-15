@@ -187,8 +187,8 @@ const editList = () => {
 
         // console.log(filteredUsers, "filteredUsers");
 
-        // console.log(deleteId.parentElement.parentElement.remove());
-        resetForm();
+        deleteId.parentElement.parentElement.remove();
+        // resetForm();
 
         editUserId.value = filteredUsers[0].id;
         editUserName.value = filteredUsers[0].name;
