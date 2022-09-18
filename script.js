@@ -6,16 +6,11 @@ const list = document.querySelector("table");
 const update = document.querySelector(".update");
 
 // Users Information in Table
-// const tableUserId = document.querySelector(`.tableUserId-${}`);
-const tableUserId = document.querySelector(`.tableUserId-10`);
-// const tableUserName = document.querySelector(".tableUserName-10");
-const tableUserEmail = document.querySelector(".tableUserEmail");
-const tableUserAddress = document.querySelector(".tableUserAddress");
+// const tableUserId = document.querySelector(`.tableUserId`);
+// const tableUserEmail = document.querySelector(".tableUserEmail");
+// const tableUserAddress = document.querySelector(".tableUserAddress");
 
-// console.log(tableUserId, "tableUserId");
-// console.log(tableUserName, "tableUserName");
-
-let id;
+let id = 1;
 
 let users = [];
 
@@ -27,38 +22,6 @@ const fetchData = async () => {
   // console.log(users, "users");
 };
 fetchData();
-
-// const addNewUser = () => {
-//   console.log("add new user");
-// };
-
-const editUserInfo = async (id) => {
-  // alert("Edit User");
-  console.log("edit user info", id);
-
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/users/${id}`
-  );
-  // const data = await response.json();
-  const { name, email, address } = await response.json();
-
-  // console.log(name, email, "singleUser");
-
-  const editUserId = document.querySelector(".editId");
-  // console.log(editUserId, "ew");
-  userId.value = id;
-  userName.value = name;
-  userEmail.value = email;
-  userAddress.value = address?.city || "404 Not Found";
-  // updateUserInfo(id);
-};
-
-const resetForm = (e) => {
-  // e.preventDefault();
-  document.querySelector(".editName").value = "";
-  document.querySelector(".editEmail").value = "";
-  document.querySelector(".editAddress").value = "";
-};
 
 const tableBody = document.querySelector("tbody");
 const rowElement = document.createElement("tr");
@@ -106,8 +69,27 @@ const loadIntoTable = async (url, table) => {
     // console.log(tableData);
   });
   tableBody.innerHTML = tableData;
-
   editList();
+};
+
+const resetForm = () => {
+  // e.preventDefault();
+  document.querySelector(".editName").value = document.querySelector(
+    `.tableUserName-${id}`
+  ).innerText;
+  document.querySelector(".editEmail").value = document.querySelector(
+    `.tableUserEmail-${id}`
+  ).innerText;
+  document.querySelector(".editAddress").value = document.querySelector(
+    `.tableUserAddress-${id}`
+  ).innerText;
+
+  document
+    .querySelectorAll(".form-control")
+    .forEach((element) => (element.className = "form-control"));
+
+  // document.querySelector(".editEmail").value = tableUserEmail;
+  // document.querySelector(".editAddress").value = tableUserAddress;
 };
 
 const editList = () => {
@@ -163,7 +145,7 @@ const editList = () => {
       userName.value = tableUserName;
       userEmail.value = tableUserEmail;
       // userEmail.value = email;
-      userAddress.value = tableUserAddress;
+      userAddress.value = tableUserAddress || "404";
       // userAddress.value = address?.city || "404 Not Found";
     }
 
@@ -212,6 +194,10 @@ update.addEventListener("click", (e) => {
   }
 
   if (confirm("Are you sure to update this user?")) {
+    document
+      .querySelectorAll(".form-control")
+      .forEach((element) => (element.className = "form-control"));
+
     fetch(`https://jsonplaceholder.typicode.com/users/${userId.value}`, {
       method: "PATCH",
       body: JSON.stringify({

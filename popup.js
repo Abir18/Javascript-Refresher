@@ -21,7 +21,10 @@ span.onclick = function () {
   document.querySelector(".newUserName").value = "";
   document.querySelector(".newUserEmail").value = "";
   document.querySelector(".newUserAddress").value = "";
-  // resetForm();
+
+  document
+    .querySelectorAll(".form-control")
+    .forEach((element) => (element.className = "form-control"));
 };
 
 // When the user clicks on Cancel button close the modal
@@ -30,7 +33,10 @@ cancel.addEventListener("click", () => {
   document.querySelector(".newUserName").value = "";
   document.querySelector(".newUserEmail").value = "";
   document.querySelector(".newUserAddress").value = "";
-  // resetForm();
+
+  document
+    .querySelectorAll(".form-control")
+    .forEach((element) => (element.className = "form-control"));
 });
 
 // When the user clicks anywhere outside of the modal, close it
