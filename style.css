@@ -1,6 +1,6 @@
 #wrapper {
   display: flex;
-  margin-left: 200px;
+  /* margin-left: 200px; */
   padding: 50px;
 }
 
@@ -33,13 +33,13 @@ hr {
 
 .edit-section {
   /* width: 100%; */
-  margin-left: 100px;
+  margin-left: 2%;
   flex: 1;
 }
 
 .edit-section input,
 textarea {
-  width: 95%;
+  min-width: 95%;
   margin-bottom: 35px;
   padding: 8px;
   font-size: 16px;
@@ -51,23 +51,24 @@ label {
 
 .vertical {
   border-left: 2px solid black;
-  height: 600px;
-  position: absolute;
-  left: 1134px;
+  height: 60vh;
+  margin-left: 2%;
+  /* position: absolute;
+  left: 1134px; */
 }
 
 table {
   /* min-width: 600px; */
-  min-width: 52%;
+  min-width: 50%;
+  /* max-width: 1000px; */
+  border-collapse: collapse;
 }
 
-table,
 th,
 td {
   border: 2px solid black;
-  border-collapse: collapse;
   padding: 5px 10px;
-  max-width: 220px;
+  /* max-width: 2%; */
 }
 
 button {
