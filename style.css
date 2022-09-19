@@ -1,28 +1,28 @@
 #wrapper {
-  display: flex;
-  /* margin-left: 200px; */
-  padding: 50px;
+    display: flex;
+    /* margin-left: 200px; */
+    padding: 50px;
 }
 
 .new-btn {
-  background: rgb(82, 81, 81);
-  color: #fff;
+    background: rgb(82, 81, 81);
+    color: #fff;
 }
 
 .new-btn:hover {
-  background: rgb(52, 50, 50);
-  /* color: #fff; */
+    background: rgb(52, 50, 50);
+    /* color: #fff; */
 }
 
 button:hover {
-  background: rgb(52, 50, 50);
-  color: #fff;
+    background: rgb(52, 50, 50);
+    color: #fff;
 }
 
 hr {
-  width: 95%;
-  border: 1px solid #000;
-  margin-bottom: 20px;
+    width: 95%;
+    border: 1px solid #000;
+    margin-bottom: 20px;
 }
 
 /* .new-user-line {
@@ -32,52 +32,55 @@ hr {
 } */
 
 .edit-section {
-  /* width: 100%; */
-  margin-left: 2%;
-  flex: 1;
+    /* width: 100%; */
+    margin-left: 2%;
+    flex: 1;
 }
 
 .edit-section input,
 textarea {
-  min-width: 95%;
-  margin-bottom: 35px;
-  padding: 8px;
-  font-size: 16px;
+    min-width: 95%;
+    margin-bottom: 35px;
+    padding: 8px;
+    font-size: 16px;
 }
 
 label {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .vertical {
-  border-left: 2px solid black;
-  height: 60vh;
-  margin-left: 2%;
-  /* position: absolute;
+    border-left: 2px solid black;
+    height: 70vh;
+    /* height: 60vh; */
+    margin-left: 2%;
+    /* position: absolute;
   left: 1134px; */
 }
 
 table {
-  /* min-width: 600px; */
-  min-width: 50%;
-  /* max-width: 1000px; */
-  border-collapse: collapse;
+    /* min-width: 600px; */
+    min-width: 50%;
+    /* max-width: 1000px; */
+    border-collapse: collapse;
+    /* min-height: 10vh; */
+    max-height: 50vh;
 }
 
 th,
 td {
-  border: 2px solid black;
-  padding: 5px 10px;
-  /* max-width: 2%; */
+    border: 2px solid black;
+    padding: 5px 10px;
+    /* max-width: 2%; */
 }
 
 button {
-  padding: 3px 10px;
-  font-size: 1.1em;
-  background: #fff;
-  border: none;
-  border: 1px solid #000;
-  cursor: pointer;
+    padding: 3px 10px;
+    font-size: 1.1em;
+    background: #fff;
+    border: none;
+    border: 1px solid #000;
+    cursor: pointer;
 }
 
 /* button:hover {
@@ -85,12 +88,17 @@ button {
 } */
 
 .delete-btn:hover {
-  /* background: rgb(237, 61, 61); */
-  /* background: #e74c3c; */
+    /* background: rgb(237, 61, 61); */
+    /* background: #e74c3c; */
+}
+
+.button-layout {
+    /* margin-left: 7%; */
+    /* padding: 0; */
 }
 
 textarea {
-  resize: none;
+    resize: none;
 }
 
 /* td {
