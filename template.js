@@ -1,5 +1,5 @@
-const root = document.querySelector("#root")
-const template = document.createElement("main")
+const root = document.querySelector("#root");
+const template = document.createElement("main");
 
 template.innerHTML = `
 	<div id="wrapper">
@@ -105,6 +105,6 @@ template.innerHTML = `
             </div>
         </div>
 	</div>
-`
+`;
 
-root.appendChild(template)
+root.appendChild(template);
